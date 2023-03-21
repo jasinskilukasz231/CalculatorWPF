@@ -5,8 +5,51 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CalculatorWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        ResizeMode="NoResize"
+        Title="Calculator" Height="500" Width="400">
 
-    </Grid>
+    <StackPanel Orientation="Vertical">
+        <TextBlock x:Name="TextBlock" FontSize="30" Height="60"/>
+        <TextBox x:Name="TextBox" FontSize="30" Height="60"/>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Button x:Name="ButtonPierw" Click="ButtonClick" Content="1/x" Grid.Column="0" Grid.Row="0" Height="70" />
+            <Button x:Name="ButtonPow" Click="ButtonClick" Content="x^2" Grid.Column="1" Grid.Row="0" Height="70" />
+            <Button x:Name="ButtonSqrt" Click="ButtonClick" Content="Pierw" Grid.Column="2" Grid.Row="0" Height="70" />
+            <Button x:Name="ButtonDiv" Click="ButtonClick" Content="/" Grid.Column="3" Grid.Row="0" Height="70" />
+            <Button x:Name="ButtonNumber7" Click="ButtonClick" Content="7" Grid.Column="0" Grid.Row="1" Height="70" />
+            <Button x:Name="ButtonNumber8" Click="ButtonClick" Content="8" Grid.Column="1" Grid.Row="1" Height="70" />
+            <Button x:Name="ButtonNumber9" Click="ButtonClick" Content="9" Grid.Column="2" Grid.Row="1" Height="70" />
+            <Button x:Name="ButtonMulti" Click="ButtonClick" Content="x" Grid.Column="3" Grid.Row="1" Height="70" />
+            <Button x:Name="ButtonNumber4" Click="ButtonClick" Content="4" Grid.Column="0" Grid.Row="2" Height="70" />
+            <Button x:Name="ButtonNumber5" Click="ButtonClick" Content="5" Grid.Column="1" Grid.Row="2" Height="70" />
+            <Button x:Name="ButtonNumber6" Click="ButtonClick" Content="6" Grid.Column="2" Grid.Row="2" Height="70" />
+            <Button x:Name="ButtonMinus" Click="ButtonClick" Content="-" Grid.Column="3" Grid.Row="2" Height="70" />
+            <Button x:Name="ButtonNumber1" Click="ButtonClick" Content="1" Grid.Column="0" Grid.Row="3" Height="70" />
+            <Button x:Name="ButtonNumber2" Click="ButtonClick" Content="2" Grid.Column="1" Grid.Row="3" Height="70" />
+            <Button x:Name="ButtonNumber3" Click="ButtonClick" Content="3" Grid.Column="2" Grid.Row="3" Height="70" />
+            <Button x:Name="ButtonPlus" Click="ButtonClick" Content="+" Grid.Column="3" Grid.Row="3" Height="70" />
+            <Button x:Name="ButtonSign" Click="ButtonClick" Content="+/-" Grid.Column="0" Grid.Row="4" Height="70" />
+            <Button x:Name="ButtonNumber0" Click="ButtonClick" Content="0" Grid.Column="1" Grid.Row="4" Height="70" />
+            <Button x:Name="ButtonDec" Click="ButtonClick" Content="," Grid.Column="2" Grid.Row="4" Height="70" />
+            <Button x:Name="ButtonEqual" Click="ButtonClick" Content="=" Grid.Column="3" Grid.Row="4" Height="70" />
+        </Grid>
+
+    </StackPanel>
+
+    
 </Window>
